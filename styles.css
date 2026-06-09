@@ -141,7 +141,8 @@ h3,
 }
 
 .nav-links a:hover,
-.nav-links a:focus-visible {
+.nav-links a:focus-visible,
+.nav-links a[aria-current="page"] {
   border-color: rgba(10, 102, 255, 0.38);
   color: var(--white);
   background: rgba(10, 102, 255, 0.1);

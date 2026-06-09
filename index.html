@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Cyberus Labs turns ideas into digital and physical reality through software, automation, product design, and fabrication.">
   <title>Cyberus Labs</title>
+  <link rel="icon" href="assets/logo/cyberus-cube.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,9 +16,7 @@
     <header class="site-header" data-header>
       <nav class="nav" aria-label="Main navigation">
         <a class="brand" href="#top" aria-label="Cyberus Labs home">
-          <span class="brand-mark" aria-hidden="true">
-            <span></span>
-          </span>
+          <img class="brand-mark" src="assets/logo/cyberus-cube.svg" alt="" aria-hidden="true">
           <span class="brand-name">Cyberus Labs</span>
         </a>
 
@@ -27,6 +29,7 @@
 
         <div class="nav-links" id="nav-links" data-nav-links>
           <a href="#projects">Projects</a>
+          <a href="#pillars">Pillars</a>
           <a href="#capabilities">Capabilities</a>
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
@@ -40,24 +43,65 @@
         <div class="hero-content">
           <p class="eyebrow">Engineering lab / maker workshop</p>
           <h1>CYBERUS LABS</h1>
+          <p class="hero-statement">TURNING IDEAS INTO REALITY.</p>
           <p class="hero-kicker">Design. Build. Solve.</p>
-          <p class="hero-copy">Turning ideas into reality, whether digitally or physically.</p>
+          <p class="hero-copy">Cyberus Labs exists to turn ideas into reality, whether digitally or physically.</p>
           <a class="button primary-button" href="#projects">Explore Projects</a>
         </div>
-        <div class="hero-panel" aria-label="Cyberus Labs signal panel">
+        <div class="hero-panel" aria-label="Cyberus Labs lab status panel">
           <div class="scanline"></div>
           <div class="panel-topline">
-            <span>LAB-01</span>
+            <span>LAB STATUS</span>
             <span>ACTIVE</span>
           </div>
-          <div class="cube-orbit">
-            <div class="cube-face"></div>
+          <div class="hero-logo-stage">
+            <div class="logo-ring"></div>
+            <img src="assets/logo/cyberus-cube.svg" alt="Cyberus Labs cube logo">
+          </div>
+          <div class="status-grid">
+            <div>
+              <span>Projects Active</span>
+              <strong>3</strong>
+            </div>
+            <div>
+              <span>Current Focus</span>
+              <strong>Hercules / Atlas / Demeter</strong>
+            </div>
+            <div>
+              <span>Status</span>
+              <strong>Active Development</strong>
+            </div>
           </div>
           <div class="telemetry">
-            <span>SOFTWARE</span>
-            <span>AUTOMATION</span>
-            <span>FABRICATION</span>
+            <span>DESIGN</span>
+            <span>BUILD</span>
+            <span>SOLVE</span>
           </div>
+        </div>
+      </section>
+
+      <section class="section pillars-section" id="pillars">
+        <div class="section-heading">
+          <p class="eyebrow">Three Pillars</p>
+          <h2>Design. Build. Solve. is the operating model.</h2>
+        </div>
+
+        <div class="pillars-grid">
+          <article>
+            <span>01</span>
+            <h3>DESIGN</h3>
+            <p>The idea.<br>The vision.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>BUILD</h3>
+            <p>The process.<br>The creation.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>SOLVE</h3>
+            <p>The solution.<br>The impact.</p>
+          </article>
         </div>
       </section>
 
@@ -69,7 +113,10 @@
 
         <div class="project-grid">
           <article class="project-card">
-            <div class="card-index">01</div>
+            <div class="card-topline">
+              <span class="card-index">01</span>
+              <span class="status-badge">ACTIVE DEVELOPMENT</span>
+            </div>
             <h3>Hercules</h3>
             <p>Smart fitness platform control and automation.</p>
             <ul>
@@ -81,7 +128,10 @@
           </article>
 
           <article class="project-card">
-            <div class="card-index">02</div>
+            <div class="card-topline">
+              <span class="card-index">02</span>
+              <span class="status-badge">ACTIVE DEVELOPMENT</span>
+            </div>
             <h3>Atlas</h3>
             <p>Business and production tracking platform.</p>
             <ul>
@@ -93,7 +143,10 @@
           </article>
 
           <article class="project-card">
-            <div class="card-index">03</div>
+            <div class="card-topline">
+              <span class="card-index">03</span>
+              <span class="status-badge live">LIVE PRODUCT</span>
+            </div>
             <h3>Demeter</h3>
             <p>Product design and small-batch manufacturing.</p>
             <ul>
@@ -140,7 +193,7 @@
         <div class="about-copy">
           <p class="eyebrow">About Cyberus Labs</p>
           <h2>Cyberus Labs is a personal engineering lab focused on transforming ideas into real-world solutions.</h2>
-          <p>It brings together software development, automation, reverse engineering, product design, and fabrication to explore what can be built when digital systems and physical making share the same workbench.</p>
+          <p>It brings together software, automation, product design, and fabrication to explore what can be built when digital systems and physical making share the same workbench.</p>
           <p>Danny Bouchard is the creator behind Cyberus Labs, guiding each project with a builder's mindset: understand the problem, design the system, make it real, and keep improving it.</p>
         </div>
         <div class="about-stats" aria-label="Cyberus Labs focus areas">
@@ -173,6 +226,10 @@
     </main>
 
     <footer class="site-footer">
+      <a class="footer-brand" href="#top" aria-label="Cyberus Labs home">
+        <img src="assets/logo/cyberus-cube.svg" alt="" aria-hidden="true">
+        <span>Cyberus Labs</span>
+      </a>
       <p>&copy; <span data-year></span> Cyberus Labs. Built for digital and physical experiments.</p>
     </footer>
   </div>

@@ -1,0 +1,29 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Cyberus Labs Cube Logo</title>
+  <desc id="desc">Minimal white geometric cube logo with three side pillars and a diamond top mark.</desc>
+
+  <defs>
+    <linearGradient id="mark" x1="260" y1="180" x2="760" y2="850" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="0.48" stop-color="#F2F4F7"/>
+      <stop offset="1" stop-color="#DDE3EA"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Top outer diamond -->
+  <path fill="url(#mark)" d="M512 174 L782 330 L512 486 L242 330 Z"/>
+
+  <!-- Top inner cutout -->
+  <path fill="#000000" d="M512 249 L657 333 L512 417 L367 333 Z"/>
+
+  <!-- Center diamond -->
+  <path fill="url(#mark)" d="M512 286 L592 332 L512 379 L432 332 Z"/>
+
+  <!-- Left face / three pillars -->
+  <path fill="url(#mark)" d="M235 369 L488 515 L488 578 L235 432 Z"/>
+  <path fill="url(#mark)" d="M235 478 L488 624 L488 687 L235 541 Z"/>
+  <path fill="url(#mark)" d="M235 587 L488 733 L488 796 L235 650 Z"/>
+
+  <!-- Right face -->
+  <path fill="url(#mark)" d="M536 516 L789 370 L789 649 Q789 678 764 692 L561 809 Q536 823 536 791 Z"/>
+</svg>

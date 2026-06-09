@@ -1,10 +1,182 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cyberus Labs turns ideas into digital and physical reality through software, automation, product design, and fabrication.">
   <title>Cyberus Labs</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Cyberus Labs</h1>
-  <p>Portfolio coming soon.</p>
+  <div class="site-shell">
+    <header class="site-header" data-header>
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="#top" aria-label="Cyberus Labs home">
+          <span class="brand-mark" aria-hidden="true">
+            <span></span>
+          </span>
+          <span class="brand-name">Cyberus Labs</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" data-nav-toggle>
+          <span class="sr-only">Toggle navigation</span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-links" id="nav-links" data-nav-links>
+          <a href="#projects">Projects</a>
+          <a href="#capabilities">Capabilities</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section">
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Engineering lab / maker workshop</p>
+          <h1>CYBERUS LABS</h1>
+          <p class="hero-kicker">Design. Build. Solve.</p>
+          <p class="hero-copy">Turning ideas into reality, whether digitally or physically.</p>
+          <a class="button primary-button" href="#projects">Explore Projects</a>
+        </div>
+        <div class="hero-panel" aria-label="Cyberus Labs signal panel">
+          <div class="scanline"></div>
+          <div class="panel-topline">
+            <span>LAB-01</span>
+            <span>ACTIVE</span>
+          </div>
+          <div class="cube-orbit">
+            <div class="cube-face"></div>
+          </div>
+          <div class="telemetry">
+            <span>SOFTWARE</span>
+            <span>AUTOMATION</span>
+            <span>FABRICATION</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="section-heading">
+          <p class="eyebrow">Featured Projects</p>
+          <h2>Systems built across code, machines, and materials.</h2>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="card-index">01</div>
+            <h3>Hercules</h3>
+            <p>Smart fitness platform control and automation.</p>
+            <ul>
+              <li>Software orchestration</li>
+              <li>Hardware control</li>
+              <li>Reverse engineering</li>
+              <li>Automation</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <div class="card-index">02</div>
+            <h3>Atlas</h3>
+            <p>Business and production tracking platform.</p>
+            <ul>
+              <li>Material cost tracking</li>
+              <li>Print usage visibility</li>
+              <li>Sales and production data</li>
+              <li>Future MAUI app foundation</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <div class="card-index">03</div>
+            <h3>Demeter</h3>
+            <p>Product design and small-batch manufacturing.</p>
+            <ul>
+              <li>3D printed donut keychains</li>
+              <li>Retail display design</li>
+              <li>Physical product creation</li>
+              <li>Small-batch iteration</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section capability-band" id="capabilities">
+        <div class="section-heading">
+          <p class="eyebrow">Capabilities</p>
+          <h2>A practical lab stack for making ideas real.</h2>
+        </div>
+
+        <div class="capability-grid">
+          <article>
+            <span class="capability-icon">SD</span>
+            <h3>Software Development</h3>
+            <p>Clean, purpose-built applications, platforms, interfaces, and internal tools.</p>
+          </article>
+          <article>
+            <span class="capability-icon">AU</span>
+            <h3>Automation</h3>
+            <p>Connected workflows and controls that reduce friction between systems and hardware.</p>
+          </article>
+          <article>
+            <span class="capability-icon">PD</span>
+            <h3>Product Design</h3>
+            <p>From sketch to prototype, shaping usable objects and systems around real constraints.</p>
+          </article>
+          <article>
+            <span class="capability-icon">3D</span>
+            <h3>3D Printing &amp; Fabrication</h3>
+            <p>Rapid iteration, fixture design, small-batch products, and physical problem solving.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section about-section" id="about">
+        <div class="about-copy">
+          <p class="eyebrow">About Cyberus Labs</p>
+          <h2>Cyberus Labs is a personal engineering lab focused on transforming ideas into real-world solutions.</h2>
+          <p>It brings together software development, automation, reverse engineering, product design, and fabrication to explore what can be built when digital systems and physical making share the same workbench.</p>
+          <p>Danny Bouchard is the creator behind Cyberus Labs, guiding each project with a builder's mindset: understand the problem, design the system, make it real, and keep improving it.</p>
+        </div>
+        <div class="about-stats" aria-label="Cyberus Labs focus areas">
+          <div>
+            <span>01</span>
+            <p>Digital systems</p>
+          </div>
+          <div>
+            <span>02</span>
+            <p>Physical prototypes</p>
+          </div>
+          <div>
+            <span>03</span>
+            <p>Automation experiments</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Interested in a project, collaboration, or opportunity?</h2>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:hello@cyberuslabs.ca">Email</a>
+          <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span data-year></span> Cyberus Labs. Built for digital and physical experiments.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

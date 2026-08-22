@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="TestBuddy project detail page for Cyberus Labs, covering a professional internal QA platform at a high level.">
+  <meta name="description" content="TestBuddy case study for Cyberus Labs, covering a professional internal QA platform developed at Keywords Studios / Mighty Build and Test.">
   <title>TestBuddy | Cyberus Labs</title>
   <link rel="icon" href="../assets/logo/cyberus-cube.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
 </head>
-<body class="project-page">
+<body class="project-page case-study-page">
   <div class="site-shell">
     <header class="site-header subpage-header" data-header>
       <nav class="nav subpage-nav" aria-label="Project navigation">
@@ -30,21 +30,31 @@
     </header>
 
     <main>
-      <section class="section project-detail-hero">
-        <div>
+      <section class="section case-hero">
+        <div class="case-hero-copy">
           <p class="eyebrow">Professional Project</p>
           <h1>TestBuddy</h1>
           <p class="project-detail-subtitle">Internal QA Platform</p>
           <p class="project-context">Professional project developed at Keywords Studios / Mighty Build and Test.</p>
         </div>
 
-        <aside class="project-meta-panel" aria-label="TestBuddy project summary">
+        <aside class="case-summary-panel" aria-label="TestBuddy project summary">
           <img src="../assets/logo/cyberus-cube.svg" alt="" aria-hidden="true">
-          <dl>
-            <div>
-              <dt>Status</dt>
-              <dd>Flagship Project</dd>
+          <div class="case-summary-metrics">
+            <div class="case-metric">
+              <strong>~60</strong>
+              <span>Pilot Users</span>
             </div>
+            <div class="case-metric">
+              <strong>~75%</strong>
+              <span>Est. Reduction in Bug-Writing Effort</span>
+            </div>
+            <div class="case-metric">
+              <strong>3,500+</strong>
+              <span>Intended User Scale</span>
+            </div>
+          </div>
+          <dl class="case-summary-meta">
             <div>
               <dt>Domain</dt>
               <dd>QA Tooling</dd>
@@ -57,78 +67,191 @@
         </aside>
       </section>
 
-      <section class="section project-detail-grid">
-        <div class="detail-stack">
-          <article class="detail-card">
-            <p class="eyebrow">Overview</p>
-            <h2>Reducing friction in the QA bug-reporting workflow.</h2>
-            <p>TestBuddy was an internal QA tooling platform designed to reduce friction in the bug-reporting workflow. It brought together gameplay footage recording, streamlined bug creation, Jira integration, AWS-backed services, tester workflows, and automation-focused tooling.</p>
-          </article>
-
-          <article class="detail-card">
-            <p class="eyebrow">Challenge</p>
-            <h2>Bug reporting can be slow, fragmented, and repetitive.</h2>
-            <p>QA testers often need to capture footage, reproduce issues, gather context, write reports, check for similar existing bugs, and push information into project management systems. The goal of TestBuddy was to make that workflow faster, more consistent, and easier to use.</p>
-          </article>
-
-          <article class="detail-card">
-            <p class="eyebrow">Solution</p>
-            <h2>A single platform for core QA workflows.</h2>
-            <p>TestBuddy centralized key QA workflows into one platform. It supported video capture, one-button bug creation, project integrations, cloud-backed data, authentication, storage, and tools designed around real tester workflows.</p>
-          </article>
-
-          <article class="detail-card">
-            <p class="eyebrow">My Role</p>
-            <h2>Development, architecture, integrations, and workflow design.</h2>
-            <p>Danny Bouchard contributed heavily to the development and architecture of TestBuddy, writing a major portion of the codebase and helping shape the system into a production-ready internal platform.</p>
-            <p>Responsibilities included software development, system architecture, AWS integration, feature implementation, UI/workflow development, and supporting the platform as it moved toward broader testing and adoption.</p>
-          </article>
-
-          <article class="detail-card">
-            <p class="eyebrow">Impact</p>
-            <h2>Built for real testers and meaningful workflow gains.</h2>
-            <ul class="detail-list">
-              <li>Used by approximately 60 pilot users.</li>
-              <li>Designed with a target scale of thousands of testers.</li>
-              <li>Estimated to reduce bug-writing effort by roughly 75%.</li>
-              <li>Helped standardize and streamline QA workflows.</li>
-            </ul>
-          </article>
-
-          <article class="detail-card">
-            <p class="eyebrow">What It Demonstrates</p>
-            <h2>Production-minded engineering for real operational needs.</h2>
-            <ul class="detail-list">
-              <li>Production software development.</li>
-              <li>Application architecture.</li>
-              <li>Cloud integration.</li>
-              <li>Workflow automation.</li>
-              <li>Product thinking.</li>
-              <li>QA domain expertise.</li>
-              <li>Building tools for real users.</li>
-            </ul>
-          </article>
-
-          <a class="back-link" href="../work.html">Back to Work</a>
+      <section class="section case-section case-section-split">
+        <div class="case-narrative">
+          <p class="eyebrow">01 / The Problem</p>
+          <h2>Bug reporting was fragmented, repetitive, and expensive in tester time.</h2>
+          <p>QA testers often need to capture footage, reproduce an issue, identify project context, collect supporting media, search for similar existing bugs, write and format a clear report, attach evidence, and submit everything into project management systems.</p>
+          <p>That work can stretch across multiple tools and repeated manual steps. TestBuddy was shaped around reducing that friction without reducing the quality, consistency, or usefulness of the final bug report.</p>
         </div>
 
-        <aside class="technology-card">
-          <p class="eyebrow">Technologies</p>
-          <h2>Tooling Stack</h2>
-          <ul class="technology-list">
-            <li>C#</li>
-            <li>.NET MAUI</li>
-            <li>AWS AppSync</li>
-            <li>AWS DynamoDB</li>
-            <li>AWS S3</li>
-            <li>AWS Cognito</li>
-            <li>Jira Integration</li>
-            <li>Slack Integration</li>
-            <li>CI/CD</li>
-            <li>QA Tooling</li>
+        <div class="case-study-media">
+          <div class="case-study-placeholder">
+            <span class="case-study-media-label">Screenshot Placeholder</span>
+            <strong>TestBuddy workflow / interface</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="section case-section">
+        <div class="case-section-copy">
+          <p class="eyebrow">02 / The Solution</p>
+          <h2>One platform built around the tester's workflow.</h2>
+          <p>TestBuddy consolidated the core bug-reporting flow into a purpose-built internal platform, bringing media capture, report creation, project integrations, cloud-backed data, authentication, storage, and tester-focused workflow tools into one place.</p>
+        </div>
+
+        <div class="feature-matrix" aria-label="TestBuddy feature areas">
+          <span>Video Capture</span>
+          <span>Image &amp; Video Editing</span>
+          <span>Streamlined Bug Creation</span>
+          <span>Bug Database</span>
+          <span>Bug Templates</span>
+          <span>Jira Integration</span>
+          <span>Slack Integration</span>
+          <span>Authentication</span>
+          <span>Cloud Storage</span>
+          <span>Notifications</span>
+          <span>Screen Detection / OCR</span>
+        </div>
+
+        <div class="case-study-media case-study-media-large">
+          <div class="case-study-placeholder">
+            <span class="case-study-media-label">Screenshot Placeholder</span>
+            <strong>TestBuddy main interface</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="section case-section">
+        <div class="case-section-copy">
+          <p class="eyebrow">03 / System</p>
+          <h2>A desktop workflow backed by cloud services and project integrations.</h2>
+          <p>The platform connected tester actions in the desktop application to AWS-backed services and external project systems, keeping the workflow centered on the tester while supporting project data, media storage, and team notifications.</p>
+        </div>
+
+        <div class="architecture-diagram" aria-label="TestBuddy system architecture diagram">
+          <div class="architecture-node">Tester</div>
+          <div class="architecture-node architecture-node-primary">TestBuddy</div>
+          <div class="architecture-node">AWS Services</div>
+          <div class="architecture-branches">
+            <span>AppSync</span>
+            <span>DynamoDB</span>
+            <span>S3</span>
+            <span>Cognito</span>
+          </div>
+          <div class="architecture-connections">
+            <span>Jira</span>
+            <span>Slack</span>
+            <span>Project Data</span>
+            <span>Media Storage</span>
+          </div>
+        </div>
+
+        <div class="case-study-media">
+          <div class="case-study-placeholder">
+            <span class="case-study-media-label">Diagram / Screenshot Placeholder</span>
+            <strong>Detailed system architecture</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="section case-section contribution-section">
+        <div class="case-narrative">
+          <p class="eyebrow">04 / My Contribution</p>
+          <h2>Co-architecting and building the platform.</h2>
+          <p>Danny Bouchard co-architected TestBuddy alongside a senior developer and wrote approximately 80% of the codebase over the project. The work was collaborative, professional engineering within Keywords Studios / Mighty Build and Test, with Danny carrying a major implementation role across the application, integrations, and tester workflow experience.</p>
+        </div>
+
+        <aside class="contribution-panel" aria-label="Contribution summary">
+          <div class="case-metric contribution-metric">
+            <strong>~80%</strong>
+            <span>Of Codebase Written</span>
+          </div>
+          <ul class="contribution-list">
+            <li>Application architecture</li>
+            <li>C# / .NET MAUI development</li>
+            <li>AWS service integration</li>
+            <li>Feature implementation</li>
+            <li>Jira integration</li>
+            <li>Slack integration</li>
+            <li>Authentication</li>
+            <li>Update systems</li>
+            <li>Notification systems</li>
+            <li>Video capture</li>
+            <li>Image/video editing workflows</li>
+            <li>Bug database workflows</li>
+            <li>UI and tester workflow design</li>
+            <li>CI/CD support</li>
+            <li>Unit testing</li>
+            <li>Technical documentation</li>
           </ul>
         </aside>
       </section>
+
+      <section class="section case-section">
+        <div class="case-section-copy">
+          <p class="eyebrow">05 / Impact</p>
+          <h2>Designed around measurable workflow improvement.</h2>
+          <p>TestBuddy was piloted with approximately 60 users and designed with a broader deployment across a tester population in the thousands in mind. The platform was estimated to reduce bug-writing effort by roughly 75% by removing repetitive workflow friction and centralizing critical reporting steps.</p>
+        </div>
+
+        <div class="impact-metrics">
+          <div class="case-metric">
+            <strong>~60</strong>
+            <span>Pilot Users</span>
+          </div>
+          <div class="case-metric">
+            <strong>~75%</strong>
+            <span>Estimated Reduction in Bug-Writing Effort</span>
+          </div>
+          <div class="case-metric">
+            <strong>3,500+</strong>
+            <span>Target User Scale</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section case-section">
+        <div class="case-section-copy">
+          <p class="eyebrow">06 / Technology</p>
+          <h2>Built across application, cloud, and workflow layers.</h2>
+        </div>
+
+        <div class="technology-groups">
+          <article>
+            <h3>Application</h3>
+            <ul>
+              <li>C#</li>
+              <li>.NET MAUI</li>
+            </ul>
+          </article>
+          <article>
+            <h3>AWS</h3>
+            <ul>
+              <li>AppSync</li>
+              <li>DynamoDB</li>
+              <li>S3</li>
+              <li>Cognito</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Integrations</h3>
+            <ul>
+              <li>Jira</li>
+              <li>Slack</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Engineering</h3>
+            <ul>
+              <li>CI/CD</li>
+              <li>Unit Testing</li>
+              <li>QA Tooling</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section case-section takeaway-section">
+        <p class="eyebrow">07 / Takeaway</p>
+        <h2>Engineering software around the people who actually use it.</h2>
+        <p>TestBuddy demonstrates application architecture, production software development, cloud integration, workflow automation, systems thinking, QA domain expertise, and product thinking applied to real operational workflows.</p>
+      </section>
+
+      <nav class="section case-study-nav" aria-label="Project navigation">
+        <a class="back-link" href="../work.html">&larr; Back to Work</a>
+        <a class="next-project-link" href="hercules.html">Next Project: Hercules &rarr;</a>
+      </nav>
     </main>
 
     <footer class="site-footer">

@@ -1020,7 +1020,7 @@ h3 {
   grid-template-columns: minmax(0, 1fr) minmax(320px, 420px);
   gap: clamp(28px, 5vw, 64px);
   align-items: end;
-  padding-top: 88px;
+  padding-top: 54px;
   padding-bottom: 44px;
 }
 
@@ -1149,10 +1149,10 @@ h3 {
 .case-narrative h2,
 .case-section-copy h2,
 .takeaway-section h2 {
-  max-width: 880px;
+  max-width: 980px;
   margin-bottom: 18px;
-  font-size: clamp(1.9rem, 4vw, 3.4rem);
-  line-height: 1.08;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  line-height: 1.14;
 }
 
 .case-narrative p,
@@ -1354,28 +1354,44 @@ h3 {
 
 .technology-groups {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 14px;
-  margin-top: 28px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 22px;
 }
 
 .technology-groups article {
-  padding: 22px;
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  min-height: 0;
+  padding: 16px 18px;
 }
 
 .technology-groups h3 {
-  margin-bottom: 14px;
+  margin: 0;
   color: var(--white);
-  font-size: 1rem;
+  font-size: 0.86rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 .technology-groups ul {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   margin: 0;
   padding: 0;
-  color: var(--muted);
   list-style: none;
+}
+
+.technology-groups li {
+  border: 1px solid rgba(10, 102, 255, 0.2);
+  padding: 5px 9px;
+  color: var(--muted);
+  background: rgba(10, 102, 255, 0.06);
+  font-size: 0.86rem;
+  font-weight: 800;
+  line-height: 1.2;
 }
 
 .takeaway-section {
@@ -1502,7 +1518,7 @@ h3 {
   }
 
   .case-hero {
-    padding-top: 56px;
+    padding-top: 40px;
   }
 
   .case-summary-panel {
@@ -1512,7 +1528,7 @@ h3 {
   .impact-metrics,
   .capability-groups,
   .technology-groups {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 
   .split-heading {
@@ -1652,7 +1668,7 @@ h3 {
   }
 
   .case-hero {
-    padding-top: 42px;
+    padding-top: 30px;
     padding-bottom: 28px;
   }
 

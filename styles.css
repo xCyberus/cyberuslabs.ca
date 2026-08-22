@@ -295,11 +295,25 @@ h3 {
   box-shadow: 0 16px 42px var(--shadow);
 }
 
+.secondary-button {
+  color: var(--text);
+  background: rgba(229, 231, 235, 0.04);
+  border-color: rgba(229, 231, 235, 0.18);
+}
+
 .primary-button:hover,
-.primary-button:focus-visible {
+.primary-button:focus-visible,
+.secondary-button:hover,
+.secondary-button:focus-visible {
   box-shadow: 0 20px 52px rgba(10, 102, 255, 0.3);
   outline: none;
   transform: translateY(-2px);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .hero-panel {
@@ -492,6 +506,87 @@ h3 {
   transform: rotate(-28deg);
 }
 
+.brand-panel {
+  min-height: 0;
+  padding: 28px 28px 24px;
+}
+
+.brand-panel::before,
+.brand-panel::after {
+  position: absolute;
+  width: 62px;
+  height: 62px;
+  content: "";
+  pointer-events: none;
+}
+
+.brand-panel::before {
+  top: 0;
+  left: 0;
+  border-top: 1px solid rgba(10, 102, 255, 0.46);
+  border-left: 1px solid rgba(10, 102, 255, 0.46);
+}
+
+.brand-panel::after {
+  right: 0;
+  bottom: 0;
+  border-right: 1px solid rgba(10, 102, 255, 0.28);
+  border-bottom: 1px solid rgba(10, 102, 255, 0.28);
+}
+
+.brand-emblem {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  min-height: 320px;
+  place-items: center;
+  margin: 0 auto;
+}
+
+.brand-emblem::before {
+  position: absolute;
+  inset: 52px;
+  content: "";
+  border: 1px solid rgba(229, 231, 235, 0.06);
+  transform: rotate(45deg);
+}
+
+.brand-emblem img {
+  position: relative;
+  z-index: 2;
+  width: min(70%, 260px);
+  filter: drop-shadow(0 24px 58px rgba(10, 102, 255, 0.34));
+}
+
+.emblem-line {
+  position: absolute;
+  pointer-events: none;
+  background: linear-gradient(90deg, transparent, rgba(10, 102, 255, 0.24), transparent);
+}
+
+.line-horizontal {
+  width: 86%;
+  height: 1px;
+}
+
+.line-vertical {
+  width: 1px;
+  height: 86%;
+  background: linear-gradient(180deg, transparent, rgba(10, 102, 255, 0.2), transparent);
+}
+
+.emblem-caption {
+  position: relative;
+  z-index: 1;
+  margin: -4px 0 0;
+  color: var(--muted);
+  font-family: Orbitron, Inter, ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-align: center;
+}
+
 .section-heading {
   margin-bottom: 34px;
 }
@@ -502,6 +597,32 @@ h3 {
 
 #projects {
   padding-top: clamp(42px, 6vw, 72px);
+}
+
+.section-link {
+  display: inline-flex;
+  width: fit-content;
+  min-height: 42px;
+  align-items: center;
+  margin-top: 26px;
+  border: 1px solid rgba(10, 102, 255, 0.36);
+  padding: 0 14px;
+  color: var(--white);
+  background: rgba(10, 102, 255, 0.1);
+  font-weight: 800;
+}
+
+.section-link:hover,
+.section-link:focus-visible {
+  border-color: rgba(10, 102, 255, 0.72);
+  outline: none;
+}
+
+.split-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
 }
 
 .pillars-section {
@@ -565,6 +686,22 @@ h3 {
   font-weight: 700;
 }
 
+.studio-pillars .pillars-grid article {
+  min-height: auto;
+}
+
+.studio-pillars .pillars-grid h3 {
+  margin-top: 48px;
+}
+
+.studio-pillars .pillars-grid strong {
+  color: var(--text);
+}
+
+.featured-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .project-card,
 .capability-grid article,
 .about-stats,
@@ -579,6 +716,10 @@ h3 {
   flex-direction: column;
   padding: 26px;
   transition: border-color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+
+.featured-grid .project-card {
+  min-height: 390px;
 }
 
 .project-card-link {
@@ -669,6 +810,49 @@ h3 {
   background: rgba(13, 15, 19, 0.42);
 }
 
+.built-grid,
+.work-group-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.built-card {
+  display: flex;
+  min-height: 260px;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid var(--line);
+  padding: 28px;
+  color: inherit;
+  background:
+    linear-gradient(135deg, rgba(10, 102, 255, 0.11), transparent 46%),
+    linear-gradient(180deg, rgba(26, 29, 34, 0.96), rgba(26, 29, 34, 0.72));
+  transition: border-color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+
+.built-card:hover,
+.built-card:focus-visible {
+  border-color: rgba(10, 102, 255, 0.46);
+  box-shadow: 0 18px 54px rgba(0, 0, 0, 0.22);
+  outline: none;
+  transform: translateY(-4px);
+}
+
+.built-card .status-badge {
+  margin-bottom: 46px;
+}
+
+.built-card p {
+  color: var(--muted);
+}
+
+.card-cta {
+  margin-top: auto;
+  color: var(--accent-soft);
+  font-weight: 800;
+}
+
 .capability-band {
   width: 100%;
   max-width: none;
@@ -754,6 +938,12 @@ h3 {
   margin: 0;
 }
 
+.contact-copy p:not(.eyebrow) {
+  max-width: 620px;
+  margin: 16px 0 0;
+  color: var(--muted);
+}
+
 .contact-links {
   display: flex;
   flex-wrap: wrap;
@@ -770,6 +960,11 @@ h3 {
   color: var(--white);
   background: rgba(10, 102, 255, 0.1);
   font-weight: 800;
+}
+
+.contact-links .primary-contact {
+  border-color: rgba(10, 102, 255, 0.72);
+  background: linear-gradient(135deg, var(--accent), #6ca7ff);
 }
 
 .contact-links a:hover,
@@ -813,6 +1008,23 @@ h3 {
 
 .project-page {
   min-height: 100vh;
+}
+
+.work-page-hero {
+  padding-top: 88px;
+  padding-bottom: 48px;
+}
+
+.work-page-hero h1 {
+  max-width: 900px;
+}
+
+.work-group {
+  padding-top: 36px;
+}
+
+.work-group + .work-group {
+  padding-top: 72px;
 }
 
 .subpage-header {
@@ -1022,15 +1234,23 @@ h3 {
   }
 
   .pillars-grid,
+  .featured-grid,
   .capability-grid,
   .about-section {
     grid-template-columns: 1fr;
   }
 
   .project-grid,
+  .built-grid,
+  .work-group-grid,
   .project-detail-hero,
   .project-detail-grid {
     grid-template-columns: 1fr;
+  }
+
+  .split-heading {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   .project-card,
@@ -1096,6 +1316,28 @@ h3 {
 
   .hero-panel {
     padding: 18px;
+  }
+
+  .hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .hero-actions .button {
+    width: 100%;
+  }
+
+  .brand-emblem {
+    min-height: 260px;
+  }
+
+  .brand-emblem img {
+    width: min(72%, 196px);
+  }
+
+  .emblem-caption {
+    font-size: 0.66rem;
+    letter-spacing: 0.14em;
   }
 
   .brand-diagram {

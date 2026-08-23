@@ -83,24 +83,23 @@
         <div>
           <p class="eyebrow">01 / The Problem</p>
           <h2>Useful hardware became dependent on software that no longer worked.</h2>
-          <p>The machine originally relied on the Wolfmate software ecosystem for key smart-control functionality. When the supporting app/service became unavailable or unusable, the hardware remained physically functional, but important control features were effectively stranded.</p>
+          <p>The Wolfmate M2 is a software-controlled smart resistance training machine. The physical hardware remained functional, but its smart resistance and workout controls depended on the manufacturer's original software ecosystem.</p>
+          <p>When that supporting app/service became unavailable or unusable, important control features were effectively stranded.</p>
           <p>The engineering goal became restoring direct control: could the machine be controlled directly without relying on the original software stack?</p>
         </div>
 
-        <div class="case-study-media case-study-media-compact">
-          <div class="case-study-placeholder">
-            <span class="case-study-media-label">Original Software UI</span>
-            <strong>Wolfmate control application</strong>
-            <p>Original Wolfmate control software</p>
-          </div>
-        </div>
+        <figure class="r-d-image r-d-image-hardware">
+          <img src="../assets/images/wolfmate-machine.png" alt="Wolfmate M2 Smart Station hardware">
+          <figcaption><span>The Hardware</span> Wolfmate M2 Smart Station</figcaption>
+        </figure>
       </section>
 
       <section class="section case-section investigation-section">
         <div class="case-section-copy">
           <p class="eyebrow">02 / Investigation</p>
           <h2>Finding the control path without documentation.</h2>
-          <p>The first challenge was understanding how the Android-based controller actually communicated with the machine. The investigation involved inspecting the original application at a high level, identifying that communication did not use a typical USB endpoint, locating the hardware serial path, observing command/response behavior, and testing direct communication.</p>
+          <p>The first challenge was understanding how the Android-based controller actually communicated with the machine. Investigation of the original application exposed the serial communication layer, including the hardware path later used for direct testing.</p>
+          <p>Captured command/response traffic helped establish enough of the control behavior to communicate with the machine directly, without turning the work into a public protocol specification.</p>
         </div>
 
         <div class="case-callout">
@@ -109,20 +108,17 @@
           <p>The hardware communication path that made direct control testing possible.</p>
         </div>
 
-        <div class="case-study-media case-study-media-compact">
-          <div class="case-study-placeholder">
-            <span class="case-study-media-label">Hardware / Debug Visual</span>
-            <strong>Controller communication or serial investigation</strong>
-            <p>Hardware / controller investigation</p>
-          </div>
-        </div>
+        <figure class="r-d-image r-d-image-evidence">
+          <img src="../assets/images/wolfmate-decompiled.png" alt="Sanitized decompiled application code and serial traffic investigation">
+          <figcaption>Decompiled application code and captured serial traffic used to investigate the original hardware interface.</figcaption>
+        </figure>
       </section>
 
-      <section class="section case-section case-section-major">
+      <section class="section case-section case-section-system">
         <div class="case-section-copy">
           <p class="eyebrow">03 / Breakthrough</p>
-          <h2>Turning observed commands into direct hardware control.</h2>
-          <p>Once the control path was identified, direct serial commands were successfully used to control the machine. The proof-of-concept recovered enough command behavior to operate core machine functions and read live state information.</p>
+          <h2>Replacing the unavailable software layer with direct control.</h2>
+          <p>Hercules uses the recovered communication path to act as a purpose-built controller for the existing hardware. Once the control path was identified, direct serial commands were successfully used to operate core machine functions and read live state information.</p>
         </div>
 
         <div class="capability-groups capability-groups-compact" aria-label="Recovered Hercules control areas">
@@ -151,8 +147,8 @@
         <div class="case-section-copy">
           <p class="eyebrow">04 / Prototype</p>
           <h2>A custom control interface built around the recovered protocol.</h2>
-          <p>A .NET MAUI Android prototype was built to provide direct control over the machine. Implemented areas included Free Lift mode, start/stop control, left/right resistance control, resistance linking and unlinking, and telemetry display.</p>
-          <p>Additional training concepts were explored, including structured modes, exercise flows, and plan-oriented workout ideas. These remained prototype and planning work rather than a completed commercial product.</p>
+          <p>A .NET MAUI Android prototype was built to provide direct control over the machine. The interface demonstrated Free Lift control, mode selection, standard/divided resistance control, resistance adjustment, rep tracking, calories, telemetry, and start/stop operation.</p>
+          <p>The prototype showed that the recovered control layer could be translated into a usable replacement-control experience. It remained an engineering prototype rather than a completed commercial product.</p>
         </div>
 
         <div class="prototype-grid">
@@ -178,13 +174,25 @@
           </div>
         </div>
 
-        <div class="case-study-media case-study-media-large">
-          <div class="case-study-placeholder">
-            <span class="case-study-media-label">Hercules UI</span>
-            <strong>Custom control interface</strong>
-            <p>Hercules custom control interface</p>
+        <div class="independent-contribution">
+          <p class="eyebrow">My Contribution</p>
+          <p>As an independent Cyberus Labs project, Hercules involved reverse engineering, Android application analysis, serial communication investigation, protocol analysis, hardware/software integration, C# / .NET MAUI application development, controller implementation, UI/workflow design, and testing against the physical machine.</p>
+          <div class="tech-stack-strip">
+            <span>Reverse Engineering</span>
+            <span>Android App Analysis</span>
+            <span>Serial Investigation</span>
+            <span>Protocol Analysis</span>
+            <span>Hardware Integration</span>
+            <span>.NET MAUI</span>
+            <span>Controller Implementation</span>
+            <span>Physical Testing</span>
           </div>
         </div>
+
+        <figure class="r-d-image r-d-image-ui">
+          <img src="../assets/images/hercules-ui.png" alt="Hercules Free Lift prototype interface">
+          <figcaption>Functional Hercules prototype providing direct control of the M2 hardware.</figcaption>
+        </figure>
       </section>
 
       <section class="section case-section case-section-compact status-section">
@@ -205,8 +213,8 @@
 
       <section class="section case-section case-section-compact takeaway-section">
         <p class="eyebrow">06 / Takeaway</p>
-        <h2>Reverse-engineering enough of a closed system to make the hardware useful again.</h2>
-        <p>Hercules demonstrates reverse engineering, undocumented system analysis, hardware/software integration, serial communication, protocol analysis, debugging, Android / .NET MAUI development, and translating low-level control into a usable interface.</p>
+        <h2>Recovering useful hardware by understanding the system beneath the software.</h2>
+        <p>Hercules demonstrates reverse engineering, systems thinking, hardware/software integration, serial communication, protocol analysis, debugging, Android / .NET MAUI development, and turning investigation into a functioning prototype under real-world constraints.</p>
       </section>
 
       <nav class="section case-study-nav" aria-label="Project navigation">

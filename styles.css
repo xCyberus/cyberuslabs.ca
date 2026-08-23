@@ -1169,7 +1169,6 @@ h3 {
 }
 
 .problem-section {
-  max-width: min(100% - 40px, 980px);
   padding-top: 26px;
   padding-bottom: 42px;
 }

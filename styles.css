@@ -1205,6 +1205,14 @@ h3 {
   font-size: 1.04rem;
 }
 
+.origin-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+  gap: clamp(24px, 4vw, 48px);
+  align-items: center;
+  max-width: min(100% - 40px, var(--max-width));
+}
+
 .case-section-split,
 .contribution-section {
   display: grid;
@@ -1290,6 +1298,14 @@ h3 {
   font-size: clamp(1.2rem, 2.5vw, 2rem);
   line-height: 1.18;
   text-transform: uppercase;
+}
+
+.case-study-placeholder p {
+  max-width: 360px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 700;
 }
 
 .case-study-media-label {
@@ -1788,7 +1804,11 @@ h3 {
   .project-detail-grid,
   .case-hero,
   .case-section-split,
-  .contribution-section,
+  .origin-section,
+  .contribution-section {
+    grid-template-columns: 1fr;
+  }
+
   .case-hero {
     padding-top: 32px;
   }

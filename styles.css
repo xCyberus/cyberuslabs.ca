@@ -1155,8 +1155,12 @@ h3 {
 }
 
 .case-section-system {
-  padding-top: 48px;
-  padding-bottom: 38px;
+  padding-top: 38px;
+  padding-bottom: 30px;
+}
+
+.case-section-system + .contribution-section {
+  padding-top: 36px;
 }
 
 .case-section-compact {

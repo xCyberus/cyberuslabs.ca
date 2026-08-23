@@ -1022,7 +1022,7 @@ h3 {
   align-items: center;
   min-height: 0;
   padding-top: 34px;
-  padding-bottom: 42px;
+  padding-bottom: 24px;
 }
 
 .case-hero h1 {
@@ -1037,8 +1037,7 @@ h3 {
 .case-summary-panel,
 .contribution-panel,
 .architecture-diagram,
-.case-study-media,
-.takeaway-section {
+.case-study-media {
   position: relative;
   overflow: hidden;
   border: 1px solid rgba(229, 231, 235, 0.12);
@@ -1053,8 +1052,7 @@ h3 {
 .case-summary-panel::before,
 .contribution-panel::before,
 .architecture-diagram::before,
-.case-study-media::before,
-.takeaway-section::before {
+.case-study-media::before {
   position: absolute;
   inset: 0;
   pointer-events: none;
@@ -1135,19 +1133,33 @@ h3 {
 }
 
 .case-section {
-  padding-top: 52px;
-  padding-bottom: 52px;
+  padding-top: 46px;
+  padding-bottom: 46px;
+}
+
+.case-hero + .case-section {
+  padding-top: 26px;
+}
+
+.case-section-major {
+  padding-top: 54px;
+  padding-bottom: 54px;
+}
+
+.case-section-system {
+  padding-top: 48px;
+  padding-bottom: 38px;
 }
 
 .case-section-compact {
-  padding-top: 38px;
-  padding-bottom: 38px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .case-section-split,
 .contribution-section {
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+  grid-template-columns: minmax(0, 1.12fr) minmax(300px, 0.88fr);
   gap: clamp(24px, 4vw, 48px);
   align-items: center;
 }
@@ -1176,6 +1188,34 @@ h3 {
   aspect-ratio: 16 / 10;
   place-items: center;
   padding: 28px;
+}
+
+.case-study-image {
+  gap: 12px;
+  margin: 0;
+  padding: 16px;
+}
+
+.case-study-image img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  object-fit: contain;
+  border: 1px solid rgba(229, 231, 235, 0.1);
+  background: rgba(13, 15, 19, 0.72);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.26);
+}
+
+.case-study-image figcaption {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-align: center;
 }
 
 .case-study-media-large {
@@ -1366,32 +1406,67 @@ h3 {
   align-items: start;
 }
 
+.evidence-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.75fr);
+  gap: clamp(22px, 4vw, 44px);
+  align-items: start;
+  padding-top: 42px;
+  padding-bottom: 34px;
+}
+
+.evidence-contribution {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 340px);
+  gap: clamp(20px, 3vw, 34px);
+  align-items: start;
+}
+
+.impact-summary {
+  border-left: 1px solid rgba(10, 102, 255, 0.24);
+  padding-left: clamp(18px, 3vw, 28px);
+}
+
+.impact-summary h2 {
+  margin-bottom: 16px;
+  font-size: clamp(1.55rem, 2.1vw, 2.1rem);
+  line-height: 1.18;
+  text-wrap: pretty;
+}
+
+.impact-summary p {
+  color: var(--muted);
+}
+
 .contribution-panel {
   display: grid;
-  gap: 16px;
-  padding: 24px;
+  gap: 14px;
+  padding: 18px;
 }
 
 .contribution-metric strong {
-  font-size: clamp(2.7rem, 7vw, 4.4rem);
+  font-size: clamp(2.45rem, 5vw, 3.6rem);
 }
 
 .contribution-list {
   position: relative;
   z-index: 1;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .contribution-list li {
-  padding: 11px 12px;
+  border: 1px solid rgba(10, 102, 255, 0.2);
+  padding: 6px 9px;
   color: var(--muted);
-  font-size: 0.88rem;
-  font-weight: 700;
+  background: rgba(10, 102, 255, 0.055);
+  font-size: 0.8rem;
+  font-weight: 800;
+  line-height: 1.2;
 }
 
 .impact-metrics {
@@ -1455,20 +1530,49 @@ h3 {
   line-height: 1.2;
 }
 
-.takeaway-section {
-  padding: clamp(28px, 5vw, 46px);
+.tech-stack-section {
+  padding-top: 28px;
+  padding-bottom: 28px;
 }
 
-.takeaway-section > * {
-  position: relative;
-  z-index: 1;
+.tech-stack-section .eyebrow {
+  margin-bottom: 12px;
+}
+
+.tech-stack-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  border: 1px solid rgba(229, 231, 235, 0.12);
+  padding: 14px;
+  background:
+    linear-gradient(135deg, rgba(26, 29, 34, 0.86), rgba(13, 15, 19, 0.76)),
+    linear-gradient(90deg, rgba(10, 102, 255, 0.08), transparent 48%);
+}
+
+.tech-stack-strip span {
+  border: 1px solid rgba(10, 102, 255, 0.24);
+  padding: 6px 10px;
+  color: var(--muted);
+  background: rgba(10, 102, 255, 0.055);
+  font-size: 0.84rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.takeaway-section {
+  padding-top: 32px;
+  padding-bottom: 24px;
+  background: transparent;
+  box-shadow: none;
 }
 
 .case-study-nav {
   display: flex;
   justify-content: space-between;
   gap: 18px;
-  padding-top: 22px;
+  padding-top: 10px;
+  padding-bottom: 56px;
 }
 
 .next-project-link {
@@ -1574,8 +1678,17 @@ h3 {
   .project-detail-grid,
   .case-hero,
   .case-section-split,
-  .contribution-section {
+  .contribution-section,
+  .evidence-section,
+  .evidence-contribution {
     grid-template-columns: 1fr;
+  }
+
+  .impact-summary {
+    border-top: 1px solid rgba(10, 102, 255, 0.24);
+    border-left: 0;
+    padding-top: 24px;
+    padding-left: 0;
   }
 
   .case-hero {
@@ -1738,8 +1851,7 @@ h3 {
   }
 
   .case-summary-panel,
-  .contribution-panel,
-  .takeaway-section {
+  .contribution-panel {
     padding: 20px;
   }
 
@@ -1761,6 +1873,13 @@ h3 {
   .case-section-compact {
     padding-top: 32px;
     padding-bottom: 32px;
+  }
+
+  .evidence-section,
+  .tech-stack-section,
+  .takeaway-section {
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 
   .case-study-media,

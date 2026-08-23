@@ -1221,28 +1221,23 @@ h3 {
 
 .case-study-image {
   display: block;
-  margin: 0;
-  padding: 18px 18px 18px;
+  margin-top: 28px;
+  margin-bottom: 0;
 }
 
 .case-study-image img {
-  position: relative;
-  z-index: 1;
   display: block;
   width: 100%;
   height: auto;
-  max-height: 620px;
+  max-height: none;
   object-fit: contain;
 }
 
 .case-study-image figcaption {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  margin-top: 14px;
+  margin-top: 10px;
   color: var(--muted);
   font-size: 0.82rem;
-  font-weight: 700;
+  font-weight: 600;
   text-align: left;
 }
 
@@ -1250,11 +1245,6 @@ h3 {
   min-height: 430px;
   margin-top: 28px;
   aspect-ratio: 16 / 9;
-}
-
-.case-study-image.case-study-media-large {
-  min-height: 0;
-  aspect-ratio: auto;
 }
 
 .case-study-placeholder {

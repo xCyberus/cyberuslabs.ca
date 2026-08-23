@@ -1034,6 +1034,19 @@ h3 {
   max-width: 800px;
 }
 
+.hero-tech-stack {
+  max-width: 680px;
+  margin-top: 26px;
+}
+
+.hero-tech-stack .eyebrow {
+  margin-bottom: 10px;
+}
+
+.hero-tech-stack .tech-stack-strip {
+  padding: 12px;
+}
+
 .case-summary-panel,
 .contribution-panel,
 .architecture-diagram,
@@ -1062,13 +1075,8 @@ h3 {
 
 .case-summary-panel {
   display: grid;
-  gap: 22px;
-  padding: 26px;
-}
-
-.case-summary-panel img {
-  width: 76px;
-  filter: drop-shadow(0 16px 38px rgba(10, 102, 255, 0.34));
+  gap: 18px;
+  padding: 22px;
 }
 
 .case-summary-metrics,
@@ -1156,16 +1164,33 @@ h3 {
   padding-bottom: 32px;
 }
 
+.problem-section {
+  max-width: min(100% - 40px, 980px);
+  padding-top: 26px;
+  padding-bottom: 42px;
+}
+
+.problem-section h2 {
+  max-width: 980px;
+}
+
+.problem-section p {
+  max-width: 860px;
+  color: var(--muted);
+  font-size: 1.04rem;
+}
+
 .case-section-split,
 .contribution-section {
   display: grid;
-  grid-template-columns: minmax(0, 1.12fr) minmax(300px, 0.88fr);
+  grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
   gap: clamp(24px, 4vw, 48px);
   align-items: center;
 }
 
 .case-narrative h2,
 .case-section-copy h2,
+.problem-section h2,
 .takeaway-section h2 {
   max-width: 1080px;
   margin-bottom: 18px;
@@ -1201,7 +1226,7 @@ h3 {
   z-index: 1;
   width: 100%;
   height: auto;
-  max-height: 420px;
+  max-height: 620px;
   object-fit: contain;
   border: 1px solid rgba(229, 231, 235, 0.1);
   background: rgba(13, 15, 19, 0.72);
@@ -1406,38 +1431,6 @@ h3 {
   align-items: start;
 }
 
-.evidence-section {
-  display: grid;
-  grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.75fr);
-  gap: clamp(22px, 4vw, 44px);
-  align-items: start;
-  padding-top: 42px;
-  padding-bottom: 34px;
-}
-
-.evidence-contribution {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(260px, 340px);
-  gap: clamp(20px, 3vw, 34px);
-  align-items: start;
-}
-
-.impact-summary {
-  border-left: 1px solid rgba(10, 102, 255, 0.24);
-  padding-left: clamp(18px, 3vw, 28px);
-}
-
-.impact-summary h2 {
-  margin-bottom: 16px;
-  font-size: clamp(1.55rem, 2.1vw, 2.1rem);
-  line-height: 1.18;
-  text-wrap: pretty;
-}
-
-.impact-summary p {
-  color: var(--muted);
-}
-
 .contribution-panel {
   display: grid;
   gap: 14px;
@@ -1530,15 +1523,6 @@ h3 {
   line-height: 1.2;
 }
 
-.tech-stack-section {
-  padding-top: 28px;
-  padding-bottom: 28px;
-}
-
-.tech-stack-section .eyebrow {
-  margin-bottom: 12px;
-}
-
 .tech-stack-strip {
   display: flex;
   flex-wrap: wrap;
@@ -1565,6 +1549,10 @@ h3 {
   padding-bottom: 24px;
   background: transparent;
   box-shadow: none;
+}
+
+.impact-section .case-section-copy {
+  max-width: 980px;
 }
 
 .case-study-nav {
@@ -1679,18 +1667,6 @@ h3 {
   .case-hero,
   .case-section-split,
   .contribution-section,
-  .evidence-section,
-  .evidence-contribution {
-    grid-template-columns: 1fr;
-  }
-
-  .impact-summary {
-    border-top: 1px solid rgba(10, 102, 255, 0.24);
-    border-left: 0;
-    padding-top: 24px;
-    padding-left: 0;
-  }
-
   .case-hero {
     padding-top: 32px;
   }
@@ -1875,8 +1851,6 @@ h3 {
     padding-bottom: 32px;
   }
 
-  .evidence-section,
-  .tech-stack-section,
   .takeaway-section {
     padding-top: 30px;
     padding-bottom: 30px;

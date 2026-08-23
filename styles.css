@@ -1220,9 +1220,12 @@ h3 {
 }
 
 .case-study-image {
-  gap: 12px;
+  align-items: start;
+  justify-items: stretch;
+  gap: 14px;
   margin: 0;
-  padding: 16px;
+  padding: 18px;
+  place-items: stretch;
 }
 
 .case-study-image img {
@@ -1244,13 +1247,18 @@ h3 {
   color: var(--muted);
   font-size: 0.82rem;
   font-weight: 700;
-  text-align: center;
+  text-align: left;
 }
 
 .case-study-media-large {
   min-height: 430px;
   margin-top: 28px;
   aspect-ratio: 16 / 9;
+}
+
+.case-study-image.case-study-media-large {
+  min-height: 0;
+  aspect-ratio: auto;
 }
 
 .case-study-placeholder {

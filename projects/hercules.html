@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Hercules project detail page for Cyberus Labs, focused on smart fitness hardware control and automation.">
+  <meta name="description" content="Hercules case study for Cyberus Labs, covering an R&D project focused on reverse-engineering app-dependent fitness hardware control.">
   <title>Hercules | Cyberus Labs</title>
   <link rel="icon" href="../assets/logo/cyberus-cube.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
 </head>
-<body class="project-page">
+<body class="project-page case-study-page r-and-d-page">
   <div class="site-shell">
     <header class="site-header subpage-header" data-header>
       <nav class="nav subpage-nav" aria-label="Project navigation">
@@ -19,6 +19,7 @@
           <img class="brand-mark" src="../assets/logo/cyberus-cube.svg" alt="" aria-hidden="true">
           <span class="brand-name">Cyberus Labs</span>
         </a>
+
         <div class="nav-links is-static">
           <a href="../work.html" aria-current="page">Work</a>
           <a href="../index.html#services">Services</a>
@@ -29,85 +30,177 @@
     </header>
 
     <main>
-      <section class="section project-detail-hero">
-        <div>
-          <p class="eyebrow">Cyberus Labs</p>
+      <section class="section case-hero">
+        <div class="case-hero-copy">
+          <p class="eyebrow">Cyberus Labs R&amp;D Project</p>
           <h1>Hercules</h1>
-          <p class="project-detail-subtitle">Fitness Control Platform</p>
-          <p class="project-context">Cyberus Labs project focused on smart fitness equipment control, workout automation, and hardware communication.</p>
+          <p class="project-detail-subtitle">Smart Fitness Hardware Control Platform</p>
+          <p class="project-context">An experimental Cyberus Labs project exploring how to restore direct control over app-dependent fitness hardware after the original software ecosystem became unavailable.</p>
+          <div class="status-inline">R&amp;D Project &middot; Paused</div>
+
+          <div class="hero-tech-stack" aria-label="Hercules tech stack">
+            <p class="eyebrow">Tech Stack</p>
+            <div class="tech-stack-strip">
+              <span>C#</span>
+              <span>.NET MAUI</span>
+              <span>Android</span>
+              <span>Serial Communication</span>
+              <span>Modbus RTU</span>
+              <span>Reverse Engineering</span>
+            </div>
+          </div>
         </div>
-        <aside class="project-meta-panel" aria-label="Hercules project summary">
-          <img src="../assets/logo/cyberus-cube.svg" alt="" aria-hidden="true">
-          <dl>
-            <div><dt>Status</dt><dd>Active Development</dd></div>
-            <div><dt>Domain</dt><dd>Hardware Control</dd></div>
-            <div><dt>Focus</dt><dd>Automation / Reverse Engineering</dd></div>
+
+        <aside class="case-summary-panel" aria-label="Hercules project summary">
+          <div class="case-summary-metrics">
+            <div class="case-metric">
+              <strong>/dev/ttyS3</strong>
+              <span>Hardware Serial Path</span>
+            </div>
+            <div class="case-metric">
+              <strong>0-150 lb</strong>
+              <span>Control Range</span>
+            </div>
+            <div class="case-metric">
+              <strong>Live</strong>
+              <span>Telemetry Readout</span>
+            </div>
+          </div>
+          <dl class="case-summary-meta">
+            <div>
+              <dt>Domain</dt>
+              <dd>Hardware / Software Integration</dd>
+            </div>
+            <div>
+              <dt>Focus</dt>
+              <dd>Reverse Engineering</dd>
+            </div>
           </dl>
         </aside>
       </section>
 
-      <section class="section project-detail-grid">
-        <div class="detail-stack">
-          <article class="detail-card">
-            <p class="eyebrow">Overview</p>
-            <h2>Custom control for a smarter training system.</h2>
-            <p>Hercules is a Cyberus Labs project built around controlling and extending a smart fitness platform. The goal is to create a custom workout control system that makes the equipment more flexible, more transparent, and easier to use.</p>
-          </article>
-          <article class="detail-card">
-            <p class="eyebrow">Challenge</p>
-            <h2>Understanding hardware behavior beyond the original software.</h2>
-            <p>The original fitness platform provided limited control and depended on software that was not reliable long-term. To build a better experience, the system needed to understand how the hardware communicated, how resistance was controlled, and how workout flows could be automated safely.</p>
-          </article>
-          <article class="detail-card">
-            <p class="eyebrow">Solution</p>
-            <h2>A customizable platform for structured training.</h2>
-            <p>Hercules explores hardware communication, command decoding, resistance control, workout planning, and UI-driven exercise workflows. The project turns a closed fitness device into a more customizable platform that can support structured training, custom modes, and future automation.</p>
-          </article>
-          <article class="detail-card">
-            <p class="eyebrow">My Role</p>
-            <h2>Protocol exploration, control logic, and workflow design.</h2>
-            <p>Danny designed and developed Hercules as a personal engineering project, including protocol exploration, control logic, UI planning, and workout workflow design. The work combines software development, hardware communication, automation, and product thinking.</p>
-          </article>
-          <article class="detail-card">
-            <p class="eyebrow">Impact</p>
-            <h2>A foundation for extending real physical systems.</h2>
-            <ul class="detail-list">
-              <li>Created a path toward custom control of smart fitness hardware.</li>
-              <li>Explored resistance control and hardware communication workflows.</li>
-              <li>Designed the foundation for structured workout planning.</li>
-              <li>Demonstrates the ability to investigate, understand, and extend complex systems.</li>
-            </ul>
-          </article>
-          <article class="detail-card">
-            <p class="eyebrow">What It Demonstrates</p>
-            <h2>Software and hardware working as one system.</h2>
-            <ul class="detail-list">
-              <li>Hardware/software integration.</li>
-              <li>Reverse engineering mindset.</li>
-              <li>Product-focused UI planning.</li>
-              <li>Automation design.</li>
-              <li>Practical problem solving.</li>
-              <li>Building tools around real physical systems.</li>
-            </ul>
-          </article>
-          <a class="back-link" href="../work.html">Back to Work</a>
+      <section class="section case-section problem-section">
+        <p class="eyebrow">01 / The Problem</p>
+        <h2>Useful hardware became dependent on software that no longer worked.</h2>
+        <p>The fitness machine originally relied on an app and service ecosystem for key smart-control behavior. When that supporting software became unavailable or unusable, the hardware was still physically functional, but important control functionality was effectively stranded.</p>
+        <p>The engineering question became direct and practical: could the machine be controlled without the original software stack?</p>
+      </section>
+
+      <section class="section case-section investigation-section">
+        <div class="case-section-copy">
+          <p class="eyebrow">02 / Investigation</p>
+          <h2>Finding the control path without documentation.</h2>
+          <p>The first challenge was understanding how the Android-based controller actually communicated with the machine. The investigation involved inspecting the original application at a high level, identifying that communication did not use a typical USB endpoint, locating the hardware serial path, observing command/response behavior, and testing direct communication.</p>
         </div>
 
-        <aside class="technology-card">
-          <p class="eyebrow">Technologies</p>
-          <h2>Tooling Stack</h2>
-          <ul class="technology-list">
-            <li>C#</li>
-            <li>.NET MAUI</li>
-            <li>Serial Communication</li>
-            <li>Hardware Control</li>
-            <li>Automation</li>
-            <li>Reverse Engineering</li>
-            <li>Workout Planning</li>
-            <li>UI Design</li>
-          </ul>
-        </aside>
+        <div class="case-callout">
+          <span>Key Discovery</span>
+          <strong>/dev/ttyS3</strong>
+          <p>The hardware communication path that made direct control testing possible.</p>
+        </div>
+
+        <div class="case-study-media case-study-media-compact">
+          <div class="case-study-placeholder">
+            <span class="case-study-media-label">Placeholder</span>
+            <strong>Controller communication / hardware investigation</strong>
+          </div>
+        </div>
       </section>
+
+      <section class="section case-section case-section-major">
+        <div class="case-section-copy">
+          <p class="eyebrow">03 / Breakthrough</p>
+          <h2>Turning observed commands into direct hardware control.</h2>
+          <p>Once the control path was identified, direct serial commands were successfully used to control the machine. The proof-of-concept recovered enough command behavior to operate core machine functions and read live state information.</p>
+        </div>
+
+        <div class="capability-groups capability-groups-compact" aria-label="Recovered Hercules control areas">
+          <article>
+            <h3>Start / Stop</h3>
+            <p>Direct machine state control.</p>
+          </article>
+          <article>
+            <h3>Left / Right Resistance</h3>
+            <p>Independent resistance commands for each side.</p>
+          </article>
+          <article>
+            <h3>Telemetry</h3>
+            <p>Readback from the machine for live state information.</p>
+          </article>
+        </div>
+
+        <div class="engineering-note">
+          <span>Control Mapping</span>
+          <code>Machine value ~= pounds x 45.35</code>
+          <p>Resistance values required mapping between human-readable pounds and machine control values.</p>
+        </div>
+      </section>
+
+      <section class="section case-section case-section-major">
+        <div class="case-section-copy">
+          <p class="eyebrow">04 / Prototype</p>
+          <h2>A custom control interface built around the recovered protocol.</h2>
+          <p>A .NET MAUI Android prototype was built to provide direct control over the machine. Implemented areas included Free Lift mode, start/stop control, left/right resistance control, resistance linking and unlinking, and telemetry display.</p>
+          <p>Additional training concepts were explored, including structured modes, exercise flows, and plan-oriented workout ideas. These remained prototype and planning work rather than a completed commercial product.</p>
+        </div>
+
+        <div class="prototype-grid">
+          <div>
+            <p class="eyebrow">Implemented</p>
+            <div class="tech-stack-strip">
+              <span>Free Lift</span>
+              <span>Start / Stop</span>
+              <span>Left / Right Resistance</span>
+              <span>Linked Resistance</span>
+              <span>Telemetry Display</span>
+            </div>
+          </div>
+          <div>
+            <p class="eyebrow">Explored / Planned</p>
+            <div class="tech-stack-strip">
+              <span>Constant</span>
+              <span>Centripetal</span>
+              <span>Centrifugal</span>
+              <span>Rowing</span>
+              <span>Exercise Plans</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-study-media case-study-media-large">
+          <div class="case-study-placeholder">
+            <span class="case-study-media-label">Screenshot Placeholder</span>
+            <strong>Hercules control interface</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="section case-section case-section-compact status-section">
+        <div class="case-section-copy">
+          <p class="eyebrow">05 / Current Status</p>
+          <h2>The core technical question was answered.</h2>
+          <p>Hercules is currently paused and may not be continued. The project successfully demonstrated direct communication with the machine, software-driven resistance control, start/stop operation, and telemetry access. Further productization and feature development were not completed.</p>
+          <p>The technical proof-of-concept succeeded: the machine could be controlled independently of the original app ecosystem.</p>
+        </div>
+
+        <div class="status-chip-grid" aria-label="Hercules project status">
+          <span>Direct Control &mdash; Proven</span>
+          <span>Telemetry &mdash; Proven</span>
+          <span>Custom UI &mdash; Prototype</span>
+          <span>Productization &mdash; Not Completed</span>
+        </div>
+      </section>
+
+      <section class="section case-section case-section-compact takeaway-section">
+        <p class="eyebrow">06 / Takeaway</p>
+        <h2>Reverse-engineering enough of a closed system to make the hardware useful again.</h2>
+        <p>Hercules demonstrates reverse engineering, undocumented system analysis, hardware/software integration, serial communication, protocol analysis, debugging, Android / .NET MAUI development, and translating low-level control into a usable interface.</p>
+      </section>
+
+      <nav class="section case-study-nav" aria-label="Project navigation">
+        <a class="back-link" href="testbuddy.html">&larr; Previous Project: TestBuddy</a>
+        <a class="next-project-link" href="atlas.html">Next Project: Atlas &rarr;</a>
+      </nav>
     </main>
 
     <footer class="site-footer">
@@ -118,6 +211,7 @@
       <p>&copy; <span data-year></span> Cyberus Labs. Design. Build. Solve.</p>
     </footer>
   </div>
+
   <script src="../script.js"></script>
 </body>
 </html>

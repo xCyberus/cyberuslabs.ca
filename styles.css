@@ -1047,6 +1047,28 @@ h3 {
   padding: 12px;
 }
 
+.status-inline {
+  display: inline-flex;
+  width: fit-content;
+  margin-top: 18px;
+  border: 1px solid rgba(10, 102, 255, 0.32);
+  padding: 7px 10px;
+  color: var(--accent-soft);
+  background: rgba(10, 102, 255, 0.08);
+  font-family: Orbitron, Inter, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.r-and-d-page .case-metric strong {
+  font-size: clamp(1.45rem, 3.7vw, 2.55rem);
+  line-height: 1.06;
+  overflow-wrap: anywhere;
+}
+
 .case-summary-panel,
 .contribution-panel,
 .architecture-diagram,
@@ -1246,6 +1268,12 @@ h3 {
   aspect-ratio: 16 / 9;
 }
 
+.case-study-media-compact {
+  min-height: 240px;
+  margin-top: 24px;
+  aspect-ratio: 16 / 7;
+}
+
 .case-study-placeholder {
   position: relative;
   z-index: 1;
@@ -1357,6 +1385,103 @@ h3 {
   margin: 0;
   color: var(--muted);
   font-size: 0.92rem;
+}
+
+.capability-groups-compact {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.capability-groups-compact article {
+  min-height: 138px;
+}
+
+.case-callout,
+.engineering-note {
+  border: 1px solid rgba(10, 102, 255, 0.24);
+  margin-top: 24px;
+  padding: 18px;
+  background:
+    linear-gradient(135deg, rgba(10, 102, 255, 0.11), rgba(26, 29, 34, 0.72)),
+    linear-gradient(rgba(229, 231, 235, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(229, 231, 235, 0.035) 1px, transparent 1px);
+  background-size: auto, 24px 24px, 24px 24px;
+}
+
+.case-callout span,
+.engineering-note span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--accent-soft);
+  font-family: Orbitron, Inter, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.case-callout strong {
+  display: block;
+  color: var(--white);
+  font-family: Orbitron, Inter, sans-serif;
+  font-size: clamp(1.7rem, 4vw, 3rem);
+  line-height: 1;
+}
+
+.case-callout p,
+.engineering-note p {
+  max-width: 760px;
+  margin: 10px 0 0;
+  color: var(--muted);
+}
+
+.engineering-note code {
+  display: inline-block;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  color: var(--white);
+  font-family: Orbitron, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: clamp(1rem, 2.2vw, 1.35rem);
+}
+
+.prototype-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.prototype-grid > div,
+.status-chip-grid {
+  border: 1px solid rgba(229, 231, 235, 0.12);
+  padding: 18px;
+  background: rgba(26, 29, 34, 0.58);
+}
+
+.prototype-grid .eyebrow {
+  margin-bottom: 12px;
+}
+
+.status-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
+  gap: clamp(24px, 4vw, 44px);
+  align-items: start;
+}
+
+.status-chip-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.status-chip-grid span {
+  border: 1px solid rgba(10, 102, 255, 0.24);
+  padding: 7px 10px;
+  color: var(--muted);
+  background: rgba(10, 102, 255, 0.055);
+  font-size: 0.84rem;
+  font-weight: 800;
+  line-height: 1.25;
 }
 
 .architecture-diagram {
@@ -1674,12 +1799,19 @@ h3 {
 
   .impact-metrics,
   .capability-groups,
+  .capability-groups-compact,
+  .prototype-grid,
+  .status-section,
   .technology-groups {
     grid-template-columns: 1fr;
   }
 
   .capability-groups {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .capability-groups-compact {
+    grid-template-columns: 1fr;
   }
 
   .split-heading {
@@ -1857,6 +1989,10 @@ h3 {
   .case-study-media-large {
     min-height: 240px;
     aspect-ratio: auto;
+  }
+
+  .case-study-media-compact {
+    min-height: 200px;
   }
 
   .feature-matrix {
